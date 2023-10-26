@@ -6,7 +6,7 @@ body {
     /*width: 1440px;*/
 }
 
-/*шапка*/
+/*                                        шапка*/
 
 header {
     height: 293px;
@@ -97,9 +97,11 @@ header {
     margin-top: -3px;
     margin-right: -3px;
 }
-/*конец шапки*/
+/*                                        конец шапки*/
 
-/*начало контента 1*/
+
+
+/*                                        начало контента 1*/
 .content1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -124,6 +126,7 @@ header {
     'text4 text4 text4';
 }
 
+/*                     описание текста ОНО ТЕБЕ НАДО */
 .text1 {
     grid-area: text1;
     display: flex;
@@ -171,6 +174,7 @@ header {
     word-spacing: -20px;
 }
 
+/*                     описание дополнительных элементов контента 1 */
 .text4 {
     grid-area: text4;
     display: flex;
@@ -202,7 +206,11 @@ header {
     font-size: 22px;
     font-weight: lighter;
 }
+/*                                         конец контента 1 */
 
+
+
+/*                                         начало контекта 2 */
 .content2 {
     margin-right: 50px;
     margin-left: 50px;
@@ -215,6 +223,8 @@ header {
     margin-left: 40px;
 }
 
+
+/*                     описание блоков контента 2 */
 .lot-block {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -260,6 +270,7 @@ header {
     background-size: cover;
 }
 
+/*                     описание текста контента 2 в блоках */
 .c2-lot-h, .c2-lot-t {
     color: white;
 }
@@ -287,7 +298,12 @@ header {
     margin-left: 41px;
     margin-top: 30px;
 }
+/*                                         конец контента 2 */
 
+
+
+
+/*                                         начало контекта 3 */
 .content3 {
     display: grid;
     /*column-gap: 25px;*/
@@ -345,7 +361,11 @@ header {
 .c3-first {
     margin-bottom: 28.5px;
 }
+/*                                         конец контента 3 */
 
+
+
+/*                                         футер */
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -360,6 +380,11 @@ footer {
     justify-content: start;
 }
 
+.footer-2 {
+    display: flex;
+    justify-content: center;
+}
+
 .foot-list1 {
     font-size: 111%;
     list-style-position: revert;
@@ -368,11 +393,8 @@ footer {
     letter-spacing: 0.1px;
 }
 
-.footer-2 {
-    display: flex;
-    justify-content: center;
-}
 
+/*                     описание текста в футере */
 .foot-list2 {
     text-align: center;
     list-style-position: revert;
@@ -408,6 +430,8 @@ footer {
     display: flex;
     justify-content: end;
 }
+/*                     конец описания текста в футере */
+
 
 .foot-but {
     background-repeat: no-repeat;
