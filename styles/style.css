@@ -3,33 +3,37 @@
 body {
     font-family: Raleway, sans-serif;
     background-color: #FFFFFF;
-    /*width: 1440px;*/
 }
 
-/*                                        шапка*/
+/* шапка */
 
 header {
+    /*
+    сделан грид, чтобы разделить элементы на 3 секции
+    впоследствии я догадался о лучшем способе реализации блоков
+    но их я уже реализовал на lots и далее
+    */
     height: 293px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /*align-content: center;*/
     align-items: center;
     justify-items: center;
 }
+
 .menu {
     display: inline-flex;
-
 }
 
-.block-header {
+.menu_header {
     background: 200px;
-    /*margin-bottom: 2px;*/
     font-size: 112%;
     margin-bottom: 1px;
-    /*display: flex;*/
 }
 
-.block-header-none {
+.style-none {
+    /* этот класс использован не только в menu,
+       так как это свойство нужно в других элементах страницы
+    */
     list-style-type: none;
 }
 
@@ -38,7 +42,7 @@ header {
 }
 
 
-.block-header-circle-one, .block-header-circle-two {
+.menu_header-circle-one, .menu_header-circle-two {
     text-decoration: underline;
     list-style-type: circle;
     text-underline-offset: 5px;
@@ -49,13 +53,13 @@ header {
     font-size: 100%;
 }
 
-.block-header-circle-one {
+.menu_header-circle-one {
     margin-left: 30px;
     margin-right: 5px;
     padding-left: 3px;
 }
 
-.block-header-circle-two {
+.menu_header-circle-two {
     margin-left: 28px;
 }
 
@@ -97,18 +101,16 @@ header {
     margin-top: -3px;
     margin-right: -3px;
 }
-/*                                        конец шапки*/
+/* конец шапки*/
 
 
 
-/*                                        начало контента 1*/
-.content1 {
+/* начало контента 1 - оно тебе надо*/
+.cover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    /*grid-template-columns: 1fr 1fr 1fr;*/
     height: 757px;
-    /*width: 100%;*/
     margin: 0 0 180px 0;
     padding: 0;
     background:
@@ -118,114 +120,119 @@ header {
         ),
         url("../images/cover.jpg") no-repeat center;
     background-size: cover;
+    /*
+    такое применение areas было нужно, чтобы спокойно расположить все элементы ОНО ТЕБЕ НАДО
+    а так же, чтобы элементы text4 были ровно по центру своего блока - дает простую фиксацию по align-items
+    */
     grid-template-areas:
-    'text1 text2 text3'
-    'text1 text2 text3'
-    'text1 text2 text3'
-    'text1 text2 text3'
-    'text4 text4 text4';
+    'cover1 cover2 cover3'
+    'cover1 cover2 cover3'
+    'cover1 cover2 cover3'
+    'cover1 cover2 cover3'
+    'cover4 cover4 cover4';
 }
 
-/*                     описание текста ОНО ТЕБЕ НАДО */
-.text1 {
-    grid-area: text1;
+/* описание текста ОНО ТЕБЕ НАДО */
+.cover_title-1 {
+    grid-area: cover1;
     display: flex;
     align-items: center;
 
 }
 
-.text2 {
-    grid-area: text2;
+.cover_title-2 {
+    grid-area: cover2;
     display: flex;
     align-items: center;
 
 }
 
-.text3 {
-    grid-area: text3;
+.cover_title-3 {
+    grid-area: cover3;
     display: flex;
     align-items: center;
 
 }
 
-.text1-cnt1, .text2-cnt1, .text3-cnt1 {
+.cover_text-1, .cover_text-2, .cover_text-3 {
     color: #FFFFFF;
     font-size: 6.89vmax;
 }
 
-.text1-cnt1 {
+.cover_text-1 {
     margin-bottom: 161px;
     margin-left: 50px;
     letter-spacing: 32px;
     word-spacing: -28px;
 }
 
-.text2-cnt1 {
+.cover_text-2 {
     margin-top: 93px;
     margin-left: 27px;
     letter-spacing: 30px;
     word-spacing: -24px;
 }
 
-.text3-cnt1 {
+.cover_text-3 {
     margin-top: 333px;
     margin-left: 14px;
     letter-spacing: 30px;
     word-spacing: -20px;
 }
 
-/*                     описание дополнительных элементов контента 1 */
-.text4 {
-    grid-area: text4;
+/* описание дополнительных элементов контента 1 */
+.cover_text-4 {
+    grid-area: cover4;
     display: flex;
     justify-content: end;
     align-items: center;
     margin: 0 50px;
 }
 
-.text4-first {
+.text-4-first {
     color: white;
     font-size: 22px;
     word-spacing: 16px;
     margin-right: 29px;
 }
 
-.text4-second {
+.text-4-second {
     color: white;
     font-size: 22px;
     margin-right: 80px;
 }
 
-.but1 {
+.cover_button {
     background-color: transparent;
     color: #FFFFFF;
     border-color: #FFFFFF;
     border-width: 1px;
-    width: 257px;
+    max-width: 257px;
+    width: 100%;
     height: 52px;
     font-size: 22px;
     font-weight: lighter;
 }
-/*                                         конец контента 1 */
+/* конец контента 1 */
 
 
 
-/*                                         начало контекта 2 */
-.content2 {
+/* начало контекта 2 */
+.lots {
     margin-right: 50px;
     margin-left: 50px;
     margin-bottom: 181px;
 }
 
-.lots {
+.lots_title {
     font-size: 40px;
     font-weight: bold;
     margin-left: 40px;
 }
 
 
-/*                     описание блоков контента 2 */
-.lot-block {
+/* описание блоков контента 2 */
+.lots_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     height: 450px;
@@ -233,14 +240,14 @@ header {
     margin-top: 27px;
 }
 
-.c2-block {
+.lots_block {
     display: flex;
     padding: 50px 40px;
     justify-content: space-between;
     flex-direction: column;
 }
 
-.c2-first {
+.lots_film {
     background-image:
         linear-gradient(
           rgba(0, 0, 0, 0.6),
@@ -250,7 +257,7 @@ header {
     background-size: cover;
 }
 
-.c2-second {
+.lots_book {
     background-image:
         linear-gradient(
           rgba(0, 0, 0, 0.6),
@@ -260,7 +267,7 @@ header {
     background-size: cover;
 }
 
-.c2-third {
+.lots_pic {
     background-image:
         linear-gradient(
           rgba(0, 0, 0, 0.6),
@@ -270,12 +277,12 @@ header {
     background-size: cover;
 }
 
-/*                     описание текста контента 2 в блоках */
-.c2-lot-h, .c2-lot-t {
+/* описание текста контента 2 в блоках */
+.lots_heading, .lots_text {
     color: white;
 }
 
-.c2-lot-h {
+.lots_heading {
     font-size: 22px;
     font-weight: bold;
     text-decoration: underline;
@@ -284,13 +291,13 @@ header {
     text-underline-offset: 3px;
 }
 
-.c2-lot-t {
+.lots_text {
     font-size: 20px;
     font-weight: lighter;
     line-height: 24px;
 }
 
-.c2-last {
+.lots_more {
     font-size: 20px;
     text-decoration: underline;
     text-decoration-thickness: 1px;
@@ -298,13 +305,13 @@ header {
     margin-left: 41px;
     margin-top: 30px;
 }
-/*                                         конец контента 2 */
+/* конец контента 2 */
 
 
 
 
-/*                                         начало контекта 3 */
-.content3 {
+/* начало контекта 3 */
+.about {
     display: grid;
     /*column-gap: 25px;*/
     margin-right: 50px;
@@ -314,30 +321,33 @@ header {
     margin-bottom: 180px;
 }
 
-.c3-logo {
+.about_logo {
     display: flex;
     justify-content: center;
     height: 487px;
-    width: 420px;
+    max-width: 420px;
+    width: 100%;
 }
 
 .logo-white {
     height: 150px;
-    width: 150px;
+    max-width: 150px;
+    width: 100%;
 }
 
-.logo-white-block {
+.logo-white-circle {
     display: flex;
     background: black;
     border-radius: 50%;
     height: 240px;
-    width: 240px;
+    max-width: 240px;
+    width: 100%;
     justify-content: center;
     align-items: center;
     margin-left: 8px;
 }
 
-.c3-text {
+.about_information {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -345,27 +355,26 @@ header {
     margin-left: 8px;
 }
 
-.c3-h {
+.about_title {
     font-size: 40px;
     font-weight: bold;
     text-transform: uppercase;
     margin-top: 103px;
-    /*padding-right: -100px;*/
 }
 
-.c3-t {
+.about_text {
     font-size: 20px;
     font-weight: lighter;
 }
 
-.c3-first {
+.about_first {
     margin-bottom: 28.5px;
 }
-/*                                         конец контента 3 */
+/* конец контента 3 */
 
 
 
-/*                                         футер */
+/* футер */
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -375,17 +384,17 @@ footer {
     margin-bottom: 90px;
 }
 
-.footer-1 {
+.footer_data {
     display: flex;
     justify-content: start;
 }
 
-.footer-2 {
+.footer_2 {
     display: flex;
     justify-content: center;
 }
 
-.foot-list1 {
+.footer_list {
     font-size: 111%;
     list-style-position: revert;
     list-style-type: none;
@@ -394,63 +403,64 @@ footer {
 }
 
 
-/*                     описание текста в футере */
-.foot-list2 {
+/* описание текста в футере */
+.footer_list2 {
     text-align: center;
     list-style-position: revert;
     list-style-type: none;
     font-size: 111%;
 }
 
-.foot-underline1, .foot-underline2, .foot-underline3, .foot-underline4 {
+.footer_underline1, .footer_underline2, .footer_underline3, .footer_underline4 {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;
 }
 
-.foot-underline1 {
+.footer_underline1 {
     margin-bottom: 3px;
     margin-top: 5px;
 }
 
-.foot-underline2 {
+.footer_underline2 {
     margin-bottom: 3px;
 }
 
-.foot-list1-3 {
+.footer_list1-3 {
     margin-bottom: 3px;
 }
 
-.foot-list2-1 {
+.footer_list2-1 {
     margin-top: 1px;
     margin-bottom: 1px;
 }
 
-.footer-3 {
+.footer_media {
     display: flex;
     justify-content: end;
 }
-/*                     конец описания текста в футере */
+/* конец описания текста в футере */
 
 
-.foot-but {
+.footer_button {
     background-repeat: no-repeat;
     border: none;
     background-color: inherit;
-    width: 48px;
-    height: 48px;
+    max-width: 48px;
+    width: 100%;
+    height: 100%;
 }
-.foot-but1 {
+.footer_yt {
     background-image: url('../images/yt.svg');
     margin-right: 48px;
 }
 
-.foot-but2 {
+.footer_vk {
     background-image: url('../images/vk.svg');
     margin-right: 48px;
 }
 
-.foot-but3 {
+.footer_pinterest {
     background-image: url('../images/pinterest.svg');
 
 }
