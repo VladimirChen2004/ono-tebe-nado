@@ -13,28 +13,30 @@
   <body>
     <!--Шапка сайта-->
     <header>
-      <article class="menu">
-        <ul class="menu_header"><li class="no-circle">главная</li></ul>
-        <ul class="menu_header"><li class="menu_header_lots"><u><a href="#lots">посмотреть лоты</a></u></li></ul>
-        <ul class="menu_header"><li class="menu_header_about"><u><a href="#auction">об аукционе</a></u></li></ul>
-      </article>
+      <section class="menu">
+        <ul class="menu_header"><li class="no-circle"><a class='cover-link' href="#cover">главная</a></li></ul>
+        <ul class="menu_header"><li class="menu_header_lots"><a href="#lots">посмотреть лоты</a></li></ul>
+        <ul class="menu_header"><li class="menu_header_about"><a href="#auction">об аукционе</a></li></ul>
+      </section>
       <img class='logo' src="images/logo-black.svg" alt='логотип'>
-      <ul>
-        <li class="data number">+9 999 555 5555</li>
-        <li class="data mail">info@sobaka.ge</li>
-        <li class="data adress">наб. Принсенграхт 263-265,</li>
-        <li class="data country">Амстердам</li>
-      </ul>
+      <section class="data">
+        <ul class="data-list">
+          <li class="number">+9 999 555 5555</li>
+          <li class="mail">info@sobaka.ge</li>
+          <li class="adress">наб. Принсенграхт 263-265,</li>
+          <li class="country">Амстердам</li>
+        </ul>
+      </section>
     </header>
 
     <main>
       <!--секция 1 - оно тебе надо-->
-      <div class="cover">
+      <div class="cover" id="cover">
         <section class="cover_title-ono"><h1 class="cover_text-ono">ОН О</h1></section>
         <section class="cover_title-tebe"><h1 class="cover_text-tebe">ТЕБ Е</h1></section>
         <section class="cover_title-nado"><h1 class="cover_text-nado">Н АДО</h1></section>
         <section class="cover_text-more">
-          <p class="text-more_discription">АУКЦИОН ВЕЩЕЙ, В КОТОРЫЕ НИКТО НЕ</p>
+          <p class="text-more_description">АУКЦИОН ВЕЩЕЙ, В КОТОРЫЕ НИКТО НЕ</p>
           <p class="text-more_description-more">ВЕРИЛ</p>
           <button class="cover_button">СДЕЛАТЬ СТАВКУ</button>
         </section>
@@ -45,18 +47,18 @@
       <div class="lots" id="lots">
         <h2 class="lots_title">ЛОТЫ</h2>
         <section class="lots_grid">
-          <article class='lots_block lots_film'>
+          <article class='lots_film'>
             <h3 class="lots_heading">Фильм режиссёра, который  бросил киношколу</h3>
             <p class="lots_text">Не просто бросил, а ушёл с первой лекции.
               Какой была бы ваша ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?</p>
           </article>
-          <article class='lots_block lots_book'>
+          <article class='lots_book'>
             <h3 class="lots_heading">Книга, где описан один скучный день из жизни рекламного агента</h3>
             <p class="lots_text">Объёмом почти в тысячу страниц. Иногда без знаков препинания и с переходами на древнеанглийский.
               В ней одновременно рассказывается о 16 июня 1904 года и об истории литературы, начиная с античных времён.
               И это всё накладывается на эпическую поэму Гомера. Сколько бы вы поставили на «Улисса» Джеймса Джойса?</p>
           </article>
-          <article class='lots_block lots_pic'>
+          <article class='lots_pic'>
             <h3 class="lots_heading">Картина, которую повторит даже 5-летний сын маминой подруги</h3>
             <p class="lots_text">Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то похожее на
               инфузорию-туфельку. Никаких полей, лесов, котиков… Сколько бы вы на такое поставили, если бы не знали,
@@ -94,18 +96,18 @@
     <!--футер страницы-->
     <footer>
       <section class="footer_data">
-        <ul>
-          <li class="footer_underline1 footer_data-list">+9 999 555 5555</li>
-          <li class="footer_underline2 footer_data-list">info@sobaka.ge</li>
-          <li class="footer_data-list footer_list1-3">наб. Принсенграхт 263-265,</li>
-          <li class="footer_data-list">Амстердам</li>
+        <ul class="footer_data-list">
+          <li class="number">+9 999 555 5555</li>
+          <li class="mail">info@sobaka.ge</li>
+          <li class="adress">наб. Принсенграхт 263-265,</li>
+          <li class="country">Амстердам</li>
         </ul>
       </section>
-      <section class="footer_menu">
-        <ul class="footer_list2">
-          <li class="footer_list2-1">главная</li>
-          <li class="footer_underline3"><a href="#lots">посмотреть лоты</a></li>
-          <li class="footer_underline4"><a href="#auction">об аукционе</a></li>
+      <section>
+        <ul class="footer_menu">
+          <li class="footer_menu_main"><a class='cover-link' href="#cover">главная</a></li>
+          <li class="footer_menu_lots"><a href="#lots">посмотреть лоты</a></li>
+          <li class="footer_menu_about"><a href="#auction">об аукционе</a></li>
         </ul>
       </section>
       <section class="footer_media">
