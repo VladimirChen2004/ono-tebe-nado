@@ -21,22 +21,22 @@ header {
     font-size: 112%;
 }
 
-.menu_header_lots:before, .menu_header_about:before{
-    content: "∘";
-    margin-right: 10px;
-}
 
 .no-circle {
     margin-left: 1px;
     display: inline;
-    list-style-type: none;
 }
 
 .link-to-cover {
     text-decoration: none;
 }
 
-.menu_header_lots, .menu_header_about {
+.menu_header_list:before {
+    content: "∘";
+    margin-right: 10px;
+}
+
+.menu_header_list {
     display: inline;
     list-style-type: circle;
     text-underline-offset: 5px;
@@ -124,33 +124,25 @@ header {
 }
 
 /* описание текста ОНО ТЕБЕ НАДО */
-.cover_title-ono {
-    grid-area: ono;
+
+.cover_title-ono, .cover_title-tebe, .cover_title-nado {
     display: flex;
     align-items: center;
-
-}
-
-.cover_title-tebe {
-    grid-area: tebe;
-    display: flex;
-    align-items: center;
-
-}
-
-.cover_title-nado {
-    grid-area: nado;
-    display: flex;
-    align-items: center;
-
-}
-
-
-.cover_text-ono, .cover_text-tebe, .cover_text-nado {
     color: #FFFFFF;
-    font-size: 8.5vh;
+    font-size: 45px;
 }
 
+@media (min-width: 1380px) {
+    .cover_title-ono, .cover_title-tebe, .cover_title-nado {
+        font-size: 66px;
+    }
+}
+
+.cover_title-ono {grid-area: ono;}
+
+.cover_title-tebe {grid-area: tebe;}
+
+.cover_title-nado {grid-area: nado;}
 
 .cover_text-ono {
     margin-bottom: 161px;
