@@ -22,6 +22,11 @@
       </nav>
       <img class='logo' src='images/logo-black.svg' alt='логотип'>
       <div class='data'>
+<!--        я использую грид в шапке и футере, и для того чтобы сделать информацию в шапке прижатой вправо
+            а в футере в лево, мне нужны разные классы, поэтому я не могу использовать один класс
+            а если вы мне предлагаете сделать flex шапку и футер, то мне придется переделать
+            родительский класс, а потом все его дочерние блоки
+            я считаю, что для данного проекта можно использовать и grid, а два класса - его необходимость-->
         <ul class='data-list'>
           <li class='number'>+9 999 555 5555</li>
           <li class='mail'>info@sobaka.ge</li>
@@ -33,22 +38,22 @@
 
     <main>
       <!--секция 1 - оно тебе надо-->
-      <div class='cover' id='cover'>
-        <section class='cover_title-ono'><h1 class='cover_text-ono'>ОН О</h1></section>
-        <section class='cover_title-tebe'><h1 class='cover_text-tebe'>ТЕБ Е</h1></section>
-        <section class='cover_title-nado'><h1 class='cover_text-nado'>Н АДО</h1></section>
-        <section class='cover_text-more'>
+      <section class='cover' id='cover'>
+        <div class='cover_title-ono'><h1 class='cover_text-ono'>ОН О</h1></div>
+        <div class='cover_title-tebe'><h1 class='cover_text-tebe'>ТЕБ Е</h1></div>
+        <div class='cover_title-nado'><h1 class='cover_text-nado'>Н АДО</h1></div>
+        <div class='cover_text-more'>
           <p class='text-more_description'>АУКЦИОН ВЕЩЕЙ, В КОТОРЫЕ НИКТО НЕ</p>
           <p class='text-more_description-more'>ВЕРИЛ</p>
           <button class='cover_button'>СДЕЛАТЬ СТАВКУ</button>
-        </section>
-      </div>
+        </div>
+      </section>
 
 
       <!--секция 2 - лоты-->
-      <div class='lots' id='lots'>
+      <section class='lots' id='lots'>
         <h2 class='lots_title'>ЛОТЫ</h2>
-        <section class='lots_grid'>
+        <div class='lots_grid'>
           <article class='lots_film'>
             <h3 class='lots_heading'>Фильм режиссёра, который  бросил киношколу</h3>
             <p class='lots_text'>Не просто бросил, а ушёл с первой лекции.
@@ -66,19 +71,19 @@
               инфузорию-туфельку. Никаких полей, лесов, котиков… Сколько бы вы на такое поставили, если бы не знали,
               что это — одна из революционных работ Кандинского?</p>
           </article>
-        </section>
+        </div>
         <p class='lots_more'><a  href='https://www.youtube.com/watch?v=u_pnia4Xhlw' target='_blank'>посмотреть больше</a></p>
-      </div>
+      </section>
 
 
       <!--секция 3 - об аукционе-->
-      <div class='about' id='auction'>
-        <section class='about_logo'>
+      <section class='about' id='auction'>
+        <div class='about_logo'>
           <article class='logo-white-circle'>
             <img class='logo-white' src='images/logo-white.svg' alt='логотип белый'>
           </article>
-        </section>
-        <section class='about_information'>
+        </div>
+        <div class='about_information'>
           <h2 class='about_title'>об аукционе</h2>
           <article>
             <p class='about_text about_first'>Здесь вы не встретите очередное пафосное собрание невероятно дорогого антиквариата.
@@ -91,8 +96,8 @@
               культуру. Когда в эти вещи не верил никто, продолжали верить их создатели.
               И сейчас эти лоты стали культовыми.</p>
           </article>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
 
     <!--футер страницы-->
