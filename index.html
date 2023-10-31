@@ -14,75 +14,77 @@
     <!--Шапка сайта-->
     <header>
       <nav>
-        <ul class='menu_header'>
-          <li class='no-circle'><a class='link-to-cover' href='#cover'>главная</a></li>
+        <ul class='header_menu'>
+          <li><a class='link-to-cover' href='#cover'>главная</a></li>
         <li class='menu_header_list'><a href='#lots'>посмотреть лоты</a></li>
         <li class='menu_header_list'><a href='#auction'>об аукционе</a></li>
         </ul>
       </nav>
       <img class='logo' src='images/logo-black.svg' alt='логотип'>
       <div class='data'>
+        <!--  сделать одинаковый блок не могу, тк тут гриды и нужно разное выравнивание в ячейке,
+              но в списке класс одинаковым сделал   -->
         <ul class='data-list'>
-          <li class='number'>+9 999 555 5555</li>
-          <li class='mail'>info@sobaka.ge</li>
-          <li class='adress'>наб. Принсенграхт 263-265,</li>
-          <li class='country'>Амстердам</li>
+          <li><a href='tel:+99995555555'>+9 999 555 5555</a></li>
+          <li><a href='mailto:info@sobaka.ge'>info@sobaka.ge</a></li>
+          <li>наб. Принсенграхт 263-265,</li>
+          <li>Амстердам</li>
         </ul>
       </div>
     </header>
-
+    
     <main>
       <!--секция 1 - оно тебе надо-->
       <section class='cover' id='cover'>
         <h1 class='cover_title'>
-          <span class='cover_title-ono'>ОН О</span>
-          <span class='cover_title-tebe'>ТЕБ Е</span>
-          <span class='cover_title-nado'>Н АДО</span></h1>
+          <span>ОН О</span>
+          <span>ТЕБ Е</span>
+          <span>Н АДО</span></h1>
         <div class='cover_text-more'>
           <p class='text-more_description'>АУКЦИОН ВЕЩЕЙ, В КОТОРЫЕ НИКТО НЕ
-            <span class="text-more_description-more"></span>ВЕРИЛ</p>
+            <span class="text-more_description-space"></span>ВЕРИЛ</p>
           <button class='cover_button'>СДЕЛАТЬ СТАВКУ</button>
         </div>
       </section>
 
-
+      
       <!--секция 2 - лоты-->
       <section class='lots' id='lots'>
         <h2 class='lots_title'>ЛОТЫ</h2>
         <div class='lots_grid'>
-          <article class='lots_film'>
+          <article class='lots_card'>
             <h3 class='lots_heading'>Фильм режиссёра, который  бросил киношколу</h3>
             <p class='lots_text'>Не просто бросил, а ушёл с первой лекции.
               Какой была бы ваша ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?</p>
           </article>
-          <article class='lots_book'>
+          <article class='lots_card'>
             <h3 class='lots_heading'>Книга, где описан один скучный день из жизни рекламного агента</h3>
             <p class='lots_text'>Объёмом почти в тысячу страниц. Иногда без знаков препинания и с переходами на древнеанглийский.
               В ней одновременно рассказывается о 16 июня 1904 года и об истории литературы, начиная с античных времён.
               И это всё накладывается на эпическую поэму Гомера. Сколько бы вы поставили на «Улисса» Джеймса Джойса?</p>
           </article>
-          <article class='lots_pic'>
+          <article class='lots_card'>
             <h3 class='lots_heading'>Картина, которую повторит даже 5-летний сын маминой подруги</h3>
             <p class='lots_text'>Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то похожее на
               инфузорию-туфельку. Никаких полей, лесов, котиков… Сколько бы вы на такое поставили, если бы не знали,
               что это — одна из революционных работ Кандинского?</p>
           </article>
         </div>
-        <p class='lots_more'><a  href='https://www.youtube.com/watch?v=u_pnia4Xhlw' target='_blank'>посмотреть больше</a></p>
+        <a class='lots_more' href='https://www.youtube.com/watch?v=u_pnia4Xhlw' target='_blank'>посмотреть больше</a>
       </section>
-
+      
 
       <!--секция 3 - об аукционе-->
       <section class='about' id='auction'>
         <div class='about_logo'>
-          <article class='logo-white-circle'>
+          <div class='logo-white-background'>
             <img class='logo-white' src='images/logo-white.svg' alt='логотип белый'>
-          </article>
+          </div>
         </div>
         <div class='about_information'>
           <h2 class='about_title'>об аукционе</h2>
           <article>
-            <p class='about_text about_first'>Здесь вы не встретите очередное пафосное собрание невероятно дорогого антиквариата.
+            <p class='about_text'>Здесь вы не встретите очередное пафосное собрание невероятно дорогого антиквариата.
               Наши лоты вообще не должны были попасть ни на один аукцион. Потому что кому нужен дневник
               девочки-подростка или картина, которую может нарисовать даже ребёнок? Кому нужны все эти странные вещи,
               созданные любителями?</p>
@@ -99,25 +101,24 @@
     <!--футер страницы-->
     <footer>
       <div class='footer_data'>
-        <ul class='footer_data-list'>
-          <li class='number'>+9 999 555 5555</li>
-          <li class='mail'>info@sobaka.ge</li>
-          <li class='adress'>наб. Принсенграхт 263-265,</li>
-          <li class='country'>Амстердам</li>
+<!--   блок нужен, чтобы через флексы подвинуть список-->
+        <ul class='data-list'>
+          <li><a href='tel:+99995555555'>+9 999 555 5555</a></li>
+          <li><a href='mailto:info@sobaka.ge'>info@sobaka.ge</a></li>
+          <li>наб. Принсенграхт 263-265,</li>
+          <li>Амстердам</li>
         </ul>
       </div>
-      <nav>
-        <ul class='footer_menu'>
-          <li class='footer_menu_main'><a class='link-to-cover' href='#cover'>главная</a></li>
-          <li class='footer_menu_lots'><a href='#lots'>посмотреть лоты</a></li>
-          <li class='footer_menu_about'><a href='#auction'>об аукционе</a></li>
-        </ul>
-      </nav>
-      <div class='footer_media'>
-        <button class='footer_button footer_yt'></button>
-        <button class='footer_button footer_vk'></button>
-        <button class='footer_button footer_pinterest'></button>
-      </div>
+      <ul class='footer_menu'>
+        <li><a class='link-to-cover' href='#cover'>главная</a></li>
+        <li><a href='#lots'>посмотреть лоты</a></li>
+        <li><a href='#auction'>об аукционе</a></li>
+      </ul>
+      <ul class='footer_media'>
+        <li><a href='http://www.youtube.com'><img src='images/yt.svg' alt='ссылка на ютуб'></a></li>
+        <li><a href='https://vk.com'><img src='images/vk.svg' alt='ссылка на вк'></a></li>
+        <li><a href='https://ru.pinterest.com/'><img src='images/pinterest.svg' alt='ссылка на пинтерест'></a></li>
+      </ul>
     </footer>
   </body>
 </html>
