@@ -99,7 +99,7 @@ header {
 /* начало контента 1 - оно тебе надо*/
 .cover {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(5, 1fr);
     height: 757px;
     margin: 0 0 180px 0;
@@ -116,49 +116,46 @@ header {
     а так же, чтобы элементы text4 были ровно по центру своего блока - дает простую фиксацию по align-items
     */
     grid-template-areas:
-    'ono tebe nado'
-    'ono tebe nado'
-    'ono tebe nado'
-    'ono tebe nado'
-    'desc desc desc';
+    'title'
+    'title'
+    'title'
+    'title'
+    'desc';
 }
 
 /* описание текста ОНО ТЕБЕ НАДО */
 
-.cover_title-ono, .cover_title-tebe, .cover_title-nado {
-    display: flex;
+.cover_title {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    color: #FFFFFF;
-    font-size: 45px;
+    grid-area: title;
+    /*margin: 0 50px;*/
+    color: #FFF;
+    font-size: 60px;
+    letter-spacing: 30px;
 }
 
-@media (min-width: 1380px) {
-    .cover_title-ono, .cover_title-tebe, .cover_title-nado {
-        font-size: 66px;
+@media (min-width: 1390px) {
+    .cover_title {
+        font-size: 100px;
     }
 }
 
-.cover_title-ono {grid-area: ono;}
-
-.cover_title-tebe {grid-area: tebe;}
-
-.cover_title-nado {grid-area: nado;}
-
-.cover_text-ono {
+.cover_title-ono {
     margin-bottom: 161px;
-    margin-left: 50px;
-    letter-spacing: 32px;
     word-spacing: -28px;
+    letter-spacing: 32px;
+    margin-left: 50px;
 }
 
-.cover_text-tebe {
+.cover_title-tebe {
     margin-top: 93px;
     margin-left: 27px;
-    letter-spacing: 30px;
     word-spacing: -24px;
 }
 
-.cover_text-nado {
+.cover_title-nado {
     margin-top: 333px;
     margin-left: 14px;
     letter-spacing: 30px;
@@ -178,13 +175,12 @@ header {
     color: white;
     font-size: 22px;
     word-spacing: 16px;
-    margin-right: 29px;
+    letter-spacing: 0.1px;
+    margin-right: 80px;
 }
 
 .text-more_description-more {
-    color: white;
-    font-size: 22px;
-    margin-right: 80px;
+    margin-right: 5px;
 }
 
 .cover_button {
