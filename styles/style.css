@@ -6,33 +6,26 @@ body {
 }
 
 /* шапка */
-header {
-    height: 293px;
+.header {
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
     align-items: center;
     margin-right: 50px;
     margin-left: 50px;
+    padding-top:92px;
+    padding-bottom: 92px;
 }
 
 .header_menu {
-    background: 200px;
+    display: flex;
+    flex-direction: row;
     margin-bottom: 1px;
-    font-size: 112%;
+    font-size: 113%;
     margin-left: 1px;
-}
-
-.header_menu li {
-    display: inline;
 }
 
 .link-to-cover {
     text-decoration: none;
-}
-
-.menu_header_list:before {
-    content: "∘";
-    margin-right: 10px;
 }
 
 .menu_header_list {
@@ -41,31 +34,23 @@ header {
     text-decoration-thickness: 1px;
     margin-bottom: 2px;
     text-align: center;
-    margin-left: 11px;
+    margin-left: 32px;
 }
 
-.data {
+.data-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: end;
     width: 100%;
     height: 100%;
-    font-size: 111%;
+    font-size: 112%;
 }
 
-.no-circle, .data-list {
-    list-style-type: none;
-}
-
-.data-list {
+.data {
     line-height: 24px;
     text-underline-offset: 4px;
     margin-right: 3px;
-}
-
-.data-list li:nth-child(3), .data-list li:nth-child(4) {
-    letter-spacing: 0.08px;
 }
 
 .logo {
@@ -80,7 +65,7 @@ header {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    height: 757px;
+    min-height: 757px;
     margin: 0 0 180px 0;
     padding: 0;
     background:
@@ -192,16 +177,17 @@ h1 span:nth-child(3) {
 .lots_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    height: 450px;
     column-gap: 25px;
     margin-top: 27px;
 }
 
 .lots_card {
     display: flex;
+    min-height: 450px;
     padding: 50px 40px;
     justify-content: space-between;
     flex-direction: column;
+    background-size: cover;
 }
 
 .lots_card:nth-child(1) {
@@ -211,7 +197,6 @@ h1 span:nth-child(3) {
           rgba(0, 0, 0, 0.6)
         ),
         url('../images/card-lot-01.jpg');
-    background-size: cover;
 }
 
 .lots_card:nth-child(2) {
@@ -221,7 +206,6 @@ h1 span:nth-child(3) {
           rgba(0, 0, 0, 0.6)
         ),
          url('../images/card-lot-02.jpg');
-    background-size: cover;
 }
 
 .lots_card:nth-child(3) {
@@ -231,17 +215,14 @@ h1 span:nth-child(3) {
           rgba(0, 0, 0, 0.6)
         ),
          url('../images/card-lot-03.jpg');
-    background-size: cover;
 }
 
 /* описание текста контента 2 в блоках */
-.lots_heading, .lots_text {
-    color: white;
-}
 
 .lots_heading {
     font-size: 22px;
     font-weight: bold;
+    color: white;
     text-decoration: underline;
     text-transform: uppercase;
     text-decoration-thickness: 1px;
@@ -252,6 +233,7 @@ h1 span:nth-child(3) {
     font-size: 20px;
     font-weight: lighter;
     line-height: 24px;
+    color: white;
 }
 
 .lots_more {
@@ -270,11 +252,9 @@ h1 span:nth-child(3) {
 /* начало контекта 3 */
 .about {
     display: grid;
-    /*column-gap: 25px;*/
     margin-right: 50px;
     margin-left: 50px;
     grid-template-columns: 1fr 2fr;
-    height: 487px;
     margin-bottom: 180px;
 }
 
@@ -308,7 +288,6 @@ h1 span:nth-child(3) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 487px;
     margin-left: 8px;
 }
 
@@ -325,9 +304,10 @@ h1 span:nth-child(3) {
 }
 
 
-.about_text:nth-child(1) {
-    margin-bottom: 28.5px;
+.about_text:nth-child(n) {
+    margin-top: 28.5px;
 }
+
 /* конец контента 3 */
 
 
@@ -338,7 +318,6 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     margin-left: 50px;
     margin-right: 50px;
-    height: 97px;
     margin-bottom: 90px;
 }
 
@@ -349,7 +328,7 @@ footer {
     width: 100%;
     height: 100%;
     margin-top: 3px;
-    font-size: 111%;
+    font-size: 112%;
 }
 
 
