@@ -12,7 +12,7 @@
   </head>
   <body>
     <!--Шапка сайта-->
-    <header>
+    <header class="header">
       <nav>
         <ul class='header_menu'>
           <li><a class='link-to-cover' href='#cover'>главная</a></li>
@@ -21,15 +21,15 @@
         </ul>
       </nav>
       <a href="#cover"><img class='logo' src='images/logo-black.svg' alt='логотип'></a>
-      <div class='data'>
+      <div class='data-block'>
         <!--  сделать одинаковый блок не могу, тк тут гриды и нужно разное выравнивание в ячейке,
               но в списке класс одинаковым сделал   -->
-        <ul class='data-list'>
-          <li><a href='tel:+99995555555'>+9 999 555 5555</a></li>
-          <li><a href='mailto:info@sobaka.ge'>info@sobaka.ge</a></li>
-          <li>наб. Принсенграхт 263-265,</li>
-          <li>Амстердам</li>
-        </ul>
+        <div class='data'>
+          <a href='tel:+99995555555'>+9 999 555 5555</a><br>
+          <a href='mailto:info@sobaka.ge'>info@sobaka.ge</a>
+          <p>наб. Принсенграхт 263-265,</p>
+          <p>Амстердам</p>
+        </div>
       </div>
     </header>
 
@@ -81,9 +81,9 @@
             <img class='logo-white' src='images/logo-white.svg' alt='логотип белый'>
           </div>
         </div>
-        <div class='about_information'>
+        <article class='about_information'>
           <h2 class='about_title'>об аукционе</h2>
-          <article>
+          <div>
             <p class='about_text'>Здесь вы не встретите очередное пафосное собрание невероятно дорогого антиквариата.
               Наши лоты вообще не должны были попасть ни на один аукцион. Потому что кому нужен дневник
               девочки-подростка или картина, которую может нарисовать даже ребёнок? Кому нужны все эти странные вещи,
@@ -93,8 +93,8 @@
               на критику, кажущуюся простоту или сложность, сейчас без этих лотов невозможно представить современную
               культуру. Когда в эти вещи не верил никто, продолжали верить их создатели.
               И сейчас эти лоты стали культовыми.</p>
-          </article>
-        </div>
+          </div>
+        </article>
       </section>
     </main>
 
@@ -102,12 +102,12 @@
     <footer>
       <div class='footer_data'>
 <!--   блок нужен, чтобы через флексы подвинуть список-->
-        <ul class='data-list'>
-          <li><a href='tel:+99995555555'>+9 999 555 5555</a></li>
-          <li><a href='mailto:info@sobaka.ge'>info@sobaka.ge</a></li>
-          <li>наб. Принсенграхт 263-265,</li>
-          <li>Амстердам</li>
-        </ul>
+        <div class='data'>
+          <a href='tel:+99995555555'>+9 999 555 5555</a><br>
+          <a href='mailto:info@sobaka.ge'>info@sobaka.ge</a>
+          <p>наб. Принсенграхт 263-265,</p>
+          <p>Амстердам</p>
+        </div>
       </div>
       <ul class='footer_menu'>
         <li><a class='link-to-cover' href='#cover'>главная</a></li>
